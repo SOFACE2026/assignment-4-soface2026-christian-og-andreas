@@ -9,14 +9,18 @@ AnimalRightsGroup::AnimalRightsGroup(int n_monkeys, int n_tigers, int n_fish)
 // Implement this (Observer part)
 void AnimalRightsGroup::update(AnimalEvent event)
 {
+    // we increment each animal correspondig to who was fed
     if (event == AnimalEvent::MonkeyFed)
     {
+        n_monkeys_fed++;
     }
     else if (event == AnimalEvent::TigerScratched)
     {
+        n_tigers_scratched++;
     }
     else if (event == AnimalEvent::FishTeethCleaned)
     {
+        n_fish_teeth_brushed++;
     }
 }
 
